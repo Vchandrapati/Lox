@@ -1,0 +1,20 @@
+var x = 5;
+var y = 10;
+print "expecting 50:";
+print (x*y);
+{
+    print "expecting 50:";
+    print (x*y);
+}
+{
+    var x = 3;
+    print "expecting 30:";
+    print (x*y);
+    {
+        var y = 5;
+        print "expecting 15:";
+        print (x*y);
+    }
+}
+print "expecting 50:";
+print (x*y);
