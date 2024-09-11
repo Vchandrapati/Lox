@@ -1,0 +1,6 @@
+
+Œ
+java:S1301"KReplace this "switch" statement by "if" statements to increase readability.(«Ä×åùÿÿÿÿJ$579e4839-6c01-4a3f-866d-07c34b893358
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(òÃ¯ñûÿÿÿÿ8ÈÚ•å›2J$8dc0daf7-fb1a-4c0d-893f-ada37a29ad6d
+z	java:S131"YComplete cases by adding the missing enum constants or add a default case to this switch.(«Ä×åùÿÿÿÿ8ªí¶ªœ2
+z	java:S1311"YComplete cases by adding the missing enum constants or add a default case to this switch.(«Ä×åùÿÿÿÿ8«í¶ªœ2
