@@ -7,19 +7,34 @@ import java.util.List;
 
 public class GenerateAst {
     public static void main(String[] args) throws IOException {
-        String outputDir = "Lox";
+        String outputDir = "translation";
 
         defineAst(outputDir, "Expr", Arrays.asList(
+                "Assign   : Token name, Expr value",
                 "Binary   : Expr left, Token operator, Expr right",
+                "Call     : Expr callee, Token paren, List<Expr> arguments",
                 "Grouping : Expr expression",
                 "Literal  : Object value",
-                "Unary    : Token operator, Expr right"));
+                "Logical  : Expr left, Token operator, Expr right",
+                "Unary    : Token operator, Expr right",
+                "Variable : Token name",
+                "DynamicLiteral : Object value"));
 
+        defineAst(outputDir, "Stmt", Arrays.asList(
+                "Block      : List<Stmt> statements",
+                "Expression : Expr expression",
+                "Function   : Token name, List<Token> params, List<Stmt> body",
+                "If         : Expr condition, Stmt thenBranch, Stmt elseBranch",
+                "Print      : Expr expression",
+                "Return     : Token keyword, Expr value",
+                "PrintOnly  : Expr expression",
+                "Var        : Token name, Expr initializer",
+                "While      : Expr condition, Stmt body",
+                "StringLoop : Token var, Expr str, Stmt body"));
     }
 
     private static void defineAst(String outputDir, String baseName, List<String> types) throws IOException {
-
-        String path = outputDir + "/" + baseName + ".java";
+        String path = baseName + ".java";
         PrintWriter writer = new PrintWriter(path, "UTF-8");
 
         writer.println("package com.lox;");

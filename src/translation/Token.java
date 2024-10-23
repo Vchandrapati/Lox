@@ -1,4 +1,4 @@
-package syntax;
+package translation;
 
 class Token {
   final TokenType type;

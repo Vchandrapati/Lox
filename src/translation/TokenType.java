@@ -1,4 +1,4 @@
-package syntax;
+package translation;
 
 enum TokenType {
   // Single-character tokens.
@@ -16,7 +16,7 @@ enum TokenType {
 
   // Keywords.
   AND, CLASS, ELSE, FALSE, FUN, FOR, IF, NIL, OR,
-  PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE, READ, RAND,
+  PRINT, RETURN, SUPER, THIS, TRUE, VAR, WHILE, READ, RAND, LOOP, IN,
 
   EOF
 }

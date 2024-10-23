@@ -1,13 +1,13 @@
-package syntax;
+package translation;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static syntax.TokenType.*;
+import static translation.TokenType.*;
 
-class LoxScanner {
+class Scanner {
     private final String source;
     private final List<Token> tokens = new ArrayList<>();
     private int start = 0;
@@ -36,9 +36,11 @@ class LoxScanner {
         keywords.put("while", WHILE);
         keywords.put("read", READ);
         keywords.put("rand", RAND);
+        keywords.put("loop", LOOP);
+        keywords.put("in", IN);
     }
 
-    LoxScanner(String source) {
+    Scanner (String source) {
         this.source = source;
     }
 
@@ -86,7 +88,6 @@ class LoxScanner {
             case '*':
                 addToken(STAR);
                 break;
-
             case '!':
                 addToken(match('=') ? BANG_EQUAL : (match('!') ? RAND : BANG));
                 break;
